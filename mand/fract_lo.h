@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:41:16 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/22 17:56:43 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/22 18:12:01 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@
 
 typedef struct s_fractol
 {
-    t_fractol 
+	char    *title,
+	
 }       t_fractol;
 
-
+int	ft_strcmp(char *s1, char *s2);
 
 #endif

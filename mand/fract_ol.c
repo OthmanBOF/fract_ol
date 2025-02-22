@@ -6,11 +6,21 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:39:04 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/22 17:55:29 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/22 18:12:59 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../mand/fract_lo.h"
+
+
+
 int main(int ac, char **av)
 {
-    t_
+    t_fractol   fract;
+
+    if (ac == 2 && (!(ft_strcmp("mandelbrot", av[1]))))
+    {
+        
+    } 
+    
 }

@@ -6,11 +6,11 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/22 17:44:43 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/22 19:23:53 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../mand/fract_lo.h"
+#include "../includes/fractlo.h"
 
 int	ft_strcmp(char *s1, char *s2)
 {

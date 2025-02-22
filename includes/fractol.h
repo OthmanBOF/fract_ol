@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fract_lo.h                                         :+:      :+:    :+:   */
+/*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/22 17:41:16 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/22 18:12:01 by obouftou         ###   ########.fr       */
+/*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
+/*   Updated: 2025/02/22 19:29:02 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACT_OL_H
-#   define FRACT_OL_H
+#ifndef FRACTOL_H
+# define FRACTOL_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -19,9 +19,16 @@
 
 typedef struct s_fractol
 {
-	char    *title,
-	
-}       t_fractol;
+	char		*name;
+	double		zoom;
+	void		*mlx_ptr;
+	void		*mlx_win;
+	char		*title;
+	double		x_start;
+	double		x_end;
+	double		y_start;
+	double		y_end;
+}	t_fractol;
 
 int	ft_strcmp(char *s1, char *s2);
 

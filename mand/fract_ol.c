@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:39:04 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/22 19:36:12 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/22 19:49:09 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int main(int ac, char **av)
 	}
 	else if (ac == 4 && (!(ft_strcmp("jullia", av[1]))))
 	{
-		fract.title = "julia";
+		fract.title = "Julia";
+		fract_prep();
 
 	}
 

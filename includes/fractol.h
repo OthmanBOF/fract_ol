@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/22 19:29:02 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/22 19:49:44 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ typedef struct s_fractol
 {
 	char		*name;
 	double		zoom;
-	void		*mlx_ptr;
-	void		*mlx_win;
+	void		*mlx_init_ptr;
+	void		*mlx_win_ptr;
 	char		*title;
 	double		x_start;
 	double		x_end;

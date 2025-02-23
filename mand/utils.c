@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 15:57:36 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 20:09:15 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,33 @@ void	ft_put_err(char *str, int fd)
 		i++;
 	}
 	exit(EXIT_FAILURE);
+}
+
+int	parse_args(char *str)
+{
+	int	i;
+	int s;
+	int non_true;
+	int f;
+	int digit;
+
+	i = 0;
+	while (str[i])
+	{
+		if ((str[i] == '-' || str[i] == '+') && i == 0)
+		{
+			s = 1;
+			i++;
+		}
+		else if (str[i] > '9' || str[i] < '0')
+		{
+			non_true += 1;
+			i++;
+		}
+		else if (str[i] == '.')
+			f += 1;
+		else
+			digit++;
+	}
+
 }

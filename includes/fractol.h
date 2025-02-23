@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 17:55:59 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 19:47:51 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 
 # define HEIGHT	900
 # define WIDTH	900
+
+
 
 typedef struct s_img_data
 {
@@ -48,6 +50,6 @@ typedef struct s_fractol
 int		ft_strcmp(char *s1, char *s2);
 void	ft_put_err(char *str, int fd);
 void	fract_prep(t_fractol *fractol);
-
+int		parse_args(char *str);
 
 #endif

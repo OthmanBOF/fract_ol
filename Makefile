@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC) $^ -o $@
+	$(CC)  $(CFLAGS)  -lmlx -framework OpenGL -framework AppKit $^ -o $@
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 21:32:37 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 21:34:42 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int	parse_args(char *str)
 	int digit;
 
 	i = -1;
+	param_init(&s, &non_true, &f, &digit);
 	while (str[++i])
 	{
 		if ((str[i] == '-' || str[i] == '+') && i != 0)

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 22:22:01 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 22:41:29 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@
 # define HEIGHT	900
 # define WIDTH	900
 
-
+typedef struct s_nbr_cmplx
+{
+	double real;
+	double img;
+}		t_nbr_cmplx;
 
 typedef struct s_img_data
 {

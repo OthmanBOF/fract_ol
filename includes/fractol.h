@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 15:38:27 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 15:50:49 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ typedef struct s_fractol
 }	t_fractol;
 
 int		ft_strcmp(char *s1, char *s2);
-void	errno(char *str, t_fractol *f);
+void	ft_put_err(char *str, int fd);
 void	fract_prep(t_fractol *fractol);
-void	errno(char *str, t_fractol *f);
+
 
 #endif

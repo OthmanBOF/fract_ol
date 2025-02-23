@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/22 21:12:08 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 14:44:42 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@
 typedef struct s_img_data
 {
 	void	*img_ptr;
+	char	*pix_data;
+	int		bit_pix;
+	int		line_len;
+	int		endian;
+	int		color;
 }	t_img_data;
 
 typedef struct s_fractol
@@ -38,6 +43,8 @@ typedef struct s_fractol
 }	t_fractol;
 
 int		ft_strcmp(char *s1, char *s2);
+void	errno(char *str, t_fractol *f);
+void	fract_prep(t_fractol *fractol);
 void	errno(char *str, t_fractol *f);
 
 #endif

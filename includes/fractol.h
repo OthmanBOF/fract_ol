@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 22:03:33 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 22:22:01 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ typedef struct s_img_data
 
 typedef struct s_fractol
 {
-	char		*name;
 	double		zoom;
 	void		*mlx_init_ptr;
 	void		*mlx_win_ptr;
@@ -52,5 +51,6 @@ void	ft_put_err(char *str, int fd);
 void	fract_prep(t_fractol *fractol);
 int		parse_args(char *str);
 void	plan(t_fractol *f);
+void	fract_creat(t_fractol *f, char *str);
 
 #endif

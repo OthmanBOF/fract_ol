@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:43:44 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 22:02:08 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 22:08:12 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	window_creat(t_fractol *f)
 {
-	f->mlx_win_ptr = mlx_new_window(f->mlx_init_ptr, WIDTH, HEIGHT, f->name);
+	f->mlx_win_ptr = mlx_new_window(f->mlx_init_ptr, WIDTH, HEIGHT, f->title);
 	if (!f->mlx_win_ptr)
 	{
 		mlx_destroy_window(f->mlx_init_ptr, f->mlx_win_ptr);

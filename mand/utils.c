@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 20:09:15 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 21:32:37 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,14 @@ void	ft_put_err(char *str, int fd)
 	exit(EXIT_FAILURE);
 }
 
+void	param_init(int *s, int *non_true, int *f, int *digit)
+{
+	*s = 0;
+	*non_true = 0;
+	*f = 0;
+	*digit = 0;
+}
+
 int	parse_args(char *str)
 {
 	int	i;
@@ -57,23 +65,21 @@ int	parse_args(char *str)
 	int f;
 	int digit;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
-		if ((str[i] == '-' || str[i] == '+') && i == 0)
-		{
-			s = 1;
-			i++;
-		}
-		else if (str[i] > '9' || str[i] < '0')
-		{
-			non_true += 1;
-			i++;
-		}
+		if ((str[i] == '-' || str[i] == '+') && i != 0)
+			return (0);
+		if (str[i] == '-' || str[i] == '+')
+			s += 1;
 		else if (str[i] == '.')
 			f += 1;
+		else if (str[i] > '9' || str[i] < '0')
+			non_true += 1;
 		else
 			digit++;
 	}
-
+	if (str[i - 1] == '.' ||s > 1 || non_true > 0 || f > 1 || digit < 1)
+		return (0);
+	return (1);
 }

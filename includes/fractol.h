@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 14:44:42 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 15:38:27 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>
+
+# define HEIGHT	900
+# define WIDTH	900
 
 typedef struct s_img_data
 {

@@ -6,14 +6,11 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:39:04 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 14:43:34 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/23 19:31:13 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-
-
-
 
 int main(int ac, char **av)
 {
@@ -24,15 +21,12 @@ int main(int ac, char **av)
 		// set the utils for mandelbrot;;
 			//set the data stucrts the work must be done on;
 		fract.title = "mandelbrot";
-
-
-
 	}
-	else if (ac == 4 && (!(ft_strcmp("jullia", av[1]))))
+	else if (ac == 4 && (!(ft_strcmp("jullia", av[1]))) &&
+				parse_args(av[2]) && parce_args(av[3]))
 	{
 		fract.title = "Julia";
 		fract_prep(&fract);
-
 	}
 
 }

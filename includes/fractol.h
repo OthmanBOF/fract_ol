@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/28 18:08:27 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/28 18:53:17 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 
 # define HEIGHT	900
 # define WIDTH	900
+# define MAX_ITER 100
+# define BLACK 0X000000
 
 typedef struct s_nbr_cmplx
 {
@@ -51,13 +53,15 @@ typedef struct s_fractol
 	t_img_data	img;
 }	t_fractol;
 
-int		ft_strcmp(char *s1, char *s2);
-void	ft_put_err(char *str, int fd);
-void	fract_prep(t_fractol *fractol);
-int		parse_args(char *str);
-void	plan(t_fractol *f);
-void	fract_creat(t_fractol *f, char *str);
-void	mandelbrot(t_fractol *f);
-double	pix_cor_to_complexcor(double val, double min, double max, double range);
+int			ft_strcmp(char *s1, char *s2);
+void		ft_put_err(char *str, int fd);
+void		fract_prep(t_fractol *fractol);
+int			parse_args(char *str);
+void		plan(t_fractol *f);
+void		fract_creat(t_fractol *f, char *str);
+void		mandelbrot(t_fractol *f);
+double		pix_cor_to_complexcor(double val, double min, double max, double range);
+t_fractol  	sum_complex(t_nbr_cmplx z, t_nbr_cmplx c);
+void		color(t_fractol *f, int x, int y, int iter_n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 22:02:31 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/28 15:54:16 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/28 17:53:21 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,4 @@ void	fract_creat(t_fractol *f, char *str)
 		mandelbrot(f);
 	else if (!ft_strcmp(str, "julia"))
 		julia(f);
-}
-
-void	fractol_render(t_fractol *f)
-{
-	int	x;
-	int	y;
-
-	y = 0;
-	while (y < HEIGHT)
-	{
-		x = 0;
-		while (x < WIDTH)
-		{
-			set_pix_data_mandel(f, x, y);
-			x++;
-		}
-		y++;
-	}
-	mlx_put_image_to_window(f->mlx_init_ptr,
-		f->mlx_win_ptr, f->img.img_ptr, 0, 0);
 }

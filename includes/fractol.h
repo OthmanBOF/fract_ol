@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 22:41:29 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/28 17:53:59 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct s_fractol
 	void		*mlx_init_ptr;
 	void		*mlx_win_ptr;
 	char		*title;
+	int			iter_n;	
 	double		x_start;
 	double		x_end;
 	double		y_start;
@@ -56,5 +57,6 @@ void	fract_prep(t_fractol *fractol);
 int		parse_args(char *str);
 void	plan(t_fractol *f);
 void	fract_creat(t_fractol *f, char *str);
+void	mandelbrot(t_fractol *f);
 
 #endif

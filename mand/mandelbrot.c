@@ -6,7 +6,13 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:38 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/28 15:41:39 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/28 15:55:35 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/fractol.h"
+
+void	set_pix_data_mande(t_fractol *f, int x, int y)
+{
+	
+}

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/28 17:53:59 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/28 18:08:27 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ int		parse_args(char *str);
 void	plan(t_fractol *f);
 void	fract_creat(t_fractol *f, char *str);
 void	mandelbrot(t_fractol *f);
+double	pix_cor_to_complexcor(double val, double min, double max, double range);
 
 #endif

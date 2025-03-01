@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 18:39:54 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/28 21:10:58 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/01 18:13:57 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	color(t_fractol *f, int x, int y, int iter_n)
 		color[2] = (iter_n * 11) % 256;
 		f->img.color = (colors[0] << 16) | (colors[1] << 8) | (colors[2]);
 	}
-	put_pixel(f, x, y, f->img.color)
+	put_pixel(f, x, y, f->img.color);
 }
 
 void	put_pixel(t_fractol *f, int x, int y, int color)
@@ -33,5 +33,5 @@ void	put_pixel(t_fractol *f, int x, int y, int color)
 	int	pixel;
 
 	pixel = ((y * f->img.line_len) + (x * (f->img.bit_pix / 8)));
-	*(unsigned int *)(pixel + f->img.pixel_data) = color;
+	*(unsigned int *)(f->img.pixel_datam + pixel) = color;
 }

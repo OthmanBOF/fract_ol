@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:38 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/28 18:26:31 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/28 21:22:10 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	set_pix_data_mande(t_fractol *f, int x, int y)
 	c.real = pix_cor_to_complexcor(x, f->y_start, f->y_end, HEIGHT);
 	while (f->iter_n < MAX_ITER)
 	{
-		z = sum_complex((t_fractol)pow(z), c);
+		z = sum_complex((t_nbr_cmplx)pow(z), c);
 		if ((z.real * z.real) + (z.img * z.img) > 4)
 		{
 			colore(f,x,y,f->iter_n);
@@ -32,7 +32,7 @@ void	set_pix_data_mande(t_fractol *f, int x, int y)
 		}
 		f->iter_n++;
 	}
-	
+	put_pixel(f, x, y, BLACK);
 }
 
 void	mandelbrot(t_fractol *f)
@@ -41,6 +41,7 @@ void	mandelbrot(t_fractol *f)
 	int	y;
 
 	y = 0;
+	zoom()
 	while (y < HEIGHT)
 	{
 		x = 0;

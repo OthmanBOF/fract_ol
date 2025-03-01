@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:41 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/28 21:28:13 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/01 17:59:24 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	set_pix_data_jul(t_fractol *f, int x, int y)
 			return ;
 		}
 		f->iter_n++;
-	}
+	} 
 	put_pixel(f, x, y, BLACK);
 }
 
@@ -38,7 +38,7 @@ void	julia(t_fractol *f)
 	int	y;
 
 	y = 0;
-	zoom()
+	zoom_init(f);
 	while (y < HEIGHT)
 	{
 		x = 0;

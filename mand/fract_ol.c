@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:39:04 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 22:19:29 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/02 03:31:42 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(int ac, char **av)
 		fract.title = "Mandelbrot";
 		fract_prep(&fract);
 		fract_creat(&fract, fract.title);
+		mlx_loop(fract.mlx_init_ptr);
 	}
 	else if (ac == 4 && (!(ft_strcmp("jullia", av[1]))) &&
 				parse_args(av[2]) && parse_args(av[3]))
@@ -29,4 +30,6 @@ int main(int ac, char **av)
 		fract_prep(&fract);
 		fract_creat(&fract, fract.title);
 	}
+	else
+		ft_put_err("error", 2);
 }

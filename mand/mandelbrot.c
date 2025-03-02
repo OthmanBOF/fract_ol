@@ -6,13 +6,13 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:38 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/01 17:59:41 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/02 03:36:46 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-void	set_pix_data_mande(t_fractol *f, int x, int y)
+void	set_pix_data_mandel(t_fractol *f, int x, int y)
 {
 	t_nbr_cmplx z;
 	t_nbr_cmplx c;
@@ -21,13 +21,13 @@ void	set_pix_data_mande(t_fractol *f, int x, int y)
 	z.real = 0.0;
 	f->iter_n = 0;
 	c.img = pix_cor_to_complexcor(x, f->x_start, f->x_end, WIDTH);
-	c.real = pix_cor_to_complexcor(x, f->y_start, f->y_end, HEIGHT);
+	c.real = pix_cor_to_complexcor(y, f->y_start, f->y_end, HEIGHT);
 	while (f->iter_n < MAX_ITER)
 	{
-		z = sum_complex((t_nbr_cmplx)pow(z), c);
+		z = sum_complex(pow_comp2(z), c);
 		if ((z.real * z.real) + (z.img * z.img) > 4)
 		{
-			colore(f,x,y,f->iter_n);
+			color(f,x,y,f->iter_n);
 			return ;
 		}
 		f->iter_n++;
@@ -37,11 +37,12 @@ void	set_pix_data_mande(t_fractol *f, int x, int y)
 
 void	mandelbrot(t_fractol *f)
 {
+
 	int	x;
 	int	y;
 
 	y = 0;
-	zoom_init()
+	zoom_init(f);
 	while (y < HEIGHT)
 	{
 		x = 0;

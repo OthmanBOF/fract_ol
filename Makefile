@@ -1,6 +1,6 @@
 NAME = fractol
 
-SRC = ./mand/fract_ol.c ./mand/init.c ./mand/utils.c
+SRC = ./mand/fract_ol.c ./mand/init.c ./mand/utils.c ./mand/utils2.c ./mand/event.c ./mand/color.c ./mand/mandelbrot.c ./mand/julia.c ./mand/utils3.c 
 
 RM = rm -f
 

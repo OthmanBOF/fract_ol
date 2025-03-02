@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:38 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 03:36:46 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/02 17:53:23 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,8 @@ void	set_pix_data_mandel(t_fractol *f, int x, int y)
 
 void	mandelbrot(t_fractol *f)
 {
-
-	int	x;
 	int	y;
+	int	x;
 
 	y = 0;
 	zoom_init(f);
@@ -55,4 +54,5 @@ void	mandelbrot(t_fractol *f)
 	}
 	mlx_put_image_to_window(f->mlx_init_ptr,
 		f->mlx_win_ptr, f->img.img_ptr, 0, 0);
+
 }

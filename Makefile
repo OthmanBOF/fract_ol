@@ -1,6 +1,6 @@
 NAME = fractol
 
-SRC = ./mand/fract_ol.c ./mand/init.c ./mand/utils.c ./mand/utils2.c ./mand/event.c ./mand/color.c ./mand/mandelbrot.c ./mand/julia.c ./mand/utils3.c 
+SRC = ./mand/fract_ol.c ./mand/init.c ./mand/utils.c ./mand/utils2.c ./mand/event.c ./mand/color.c ./mand/mandelbrot.c ./mand/julia.c ./mand/utils3.c
 
 RM = rm -f
 
@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC)  $(CFLAGS)  -lmlx -framework OpenGL -framework AppKit $^ -o $@
+	$(CC)  $(CFLAGS)  -fsanitize=address -g -lmlx -framework OpenGL -framework AppKit $^ -o $@
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@

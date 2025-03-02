@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:38 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 17:53:23 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/02 21:17:40 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	set_pix_data_mandel(t_fractol *f, int x, int y)
 	z.img = 0.0;
 	z.real = 0.0;
 	f->iter_n = 0;
-	c.img = pix_cor_to_complexcor(x, f->x_start, f->x_end, WIDTH);
-	c.real = pix_cor_to_complexcor(y, f->y_start, f->y_end, HEIGHT);
+	c.real = pix_cor_to_complexcor(x, f->x_start, f->x_end, WIDTH);
+	c.img = pix_cor_to_complexcor(y, f->y_start, f->y_end, HEIGHT);
 	while (f->iter_n < MAX_ITER)
 	{
 		z = sum_complex(pow_comp2(z), c);

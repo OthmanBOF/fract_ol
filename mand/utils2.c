@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 22:02:31 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 17:56:55 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/02 21:20:39 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	fract_creat(t_fractol *f, char *str)
 		mandelbrot(f);
 	else if (!ft_strcmp(str, "julia"))
 		julia(f);
+	
 }
 
 double	pix_cor_to_complexcor(double val, double min, double max, double range)

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:43:44 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 17:42:15 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/02 23:25:55 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,7 @@ void	img_creat(t_fractol *f)
 		&f->img.bit_pix, &f->img.line_len, &f->img.endian);
 }
 
-// void	event_init(t_fractol *f)
-// {
 
-// }
 
 void	fract_prep(t_fractol *fractol)
 {
@@ -49,4 +46,6 @@ void	fract_prep(t_fractol *fractol)
 	window_creat(fractol);
 	img_creat(fractol);
 	plan(fractol);
+	printf("fffffffffffffffff");
+	event_init(fractol);
 }

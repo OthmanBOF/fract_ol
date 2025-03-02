@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 16:49:18 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/02 22:56:02 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,6 @@ void		zoom_init(t_fractol *f);
 void		put_pixel(t_fractol *f, int x, int y, int color);
 void		julia(t_fractol *f);
 t_nbr_cmplx	pow_comp2 (t_nbr_cmplx z);
+void		event_init(t_fractol *f);
 
 #endif

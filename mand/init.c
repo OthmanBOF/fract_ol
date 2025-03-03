@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:43:44 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/03 03:33:14 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 17:13:30 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,9 @@ void	img_creat(t_fractol *f)
 		free(f->mlx_init_ptr);
 		ft_put_err("img creation error\n", 2);
 	}
-	f->img.pix_data =  mlx_get_data_addr(f->img.img_ptr, \
+	f->img.pix_data = mlx_get_data_addr(f->img.img_ptr, \
 		&f->img.bit_pix, &f->img.line_len, &f->img.endian);
 }
-
-
 
 void	fract_prep(t_fractol *fractol)
 {

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:38 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/03 03:46:19 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 17:15:28 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	set_pix_data_mandel(t_fractol *f, int x, int y)
 {
-	t_nbr_cmplx z;
-	t_nbr_cmplx c;
+	t_nbr_cmplx	z;
+	t_nbr_cmplx	c;
 
 	z.img = 0.0;
 	z.real = 0.0;
@@ -27,7 +27,7 @@ void	set_pix_data_mandel(t_fractol *f, int x, int y)
 		z = sum_complex(pow_comp2(z), c);
 		if ((z.real * z.real) + (z.img * z.img) > 4)
 		{
-			color(f,x,y,f->iter_n);
+			color(f, x, y, f->iter_n);
 			return ;
 		}
 		f->iter_n++;
@@ -54,5 +54,4 @@ void	mandelbrot(t_fractol *f)
 	}
 	mlx_put_image_to_window(f->mlx_init_ptr,
 		f->mlx_win_ptr, f->img.img_ptr, 0, 0);
-
 }

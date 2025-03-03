@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 22:02:31 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 21:20:39 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 17:16:44 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	plan(t_fractol *f)
 	f->x_end = -2.0;
 	f->y_start = 2.0;
 	f->y_end = -2.0;
-
 }
 
 void	zoom_init(t_fractol *f)
@@ -34,14 +33,11 @@ void	fract_creat(t_fractol *f, char *str)
 {
 	if (ft_strcmp(str, "Mandelbrot") == 0)
 		mandelbrot(f);
-	else if (!ft_strcmp(str, "julia"))
+	else if (ft_strcmp(str, "Julia") == 0)
 		julia(f);
-	
 }
 
 double	pix_cor_to_complexcor(double val, double min, double max, double range)
 {
 	return ((val / range) * (max - min) + min);
 }
-
-

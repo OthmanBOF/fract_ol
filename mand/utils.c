@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/23 21:34:42 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 17:16:19 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_put_err(char *str, int fd)
 {
 	int	i;
 
-	if(!str && fd < 0)
+	if (!str && fd < 0)
 		return ;
 	i = 0;
 	while (str[i])
@@ -60,10 +60,10 @@ void	param_init(int *s, int *non_true, int *f, int *digit)
 int	parse_args(char *str)
 {
 	int	i;
-	int s;
-	int non_true;
-	int f;
-	int digit;
+	int	s;
+	int	non_true;
+	int	f;
+	int	digit;
 
 	i = -1;
 	param_init(&s, &non_true, &f, &digit);
@@ -80,7 +80,7 @@ int	parse_args(char *str)
 		else
 			digit++;
 	}
-	if (str[i - 1] == '.' ||s > 1 || non_true > 0 || f > 1 || digit < 1)
+	if (str[i - 1] == '.' || s > 1 || non_true > 0 || f > 1 || digit < 1)
 		return (0);
 	return (1);
 }

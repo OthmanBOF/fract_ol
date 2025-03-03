@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:43:44 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 23:25:55 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 03:33:14 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,5 @@ void	fract_prep(t_fractol *fractol)
 	window_creat(fractol);
 	img_creat(fractol);
 	plan(fractol);
-	printf("fffffffffffffffff");
 	event_init(fractol);
 }

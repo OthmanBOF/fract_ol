@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 21:46:03 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 23:39:09 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 03:45:15 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,3 @@ void	event_init(t_fractol *f)
 	mlx_hook(f->mlx_win_ptr, 2, 0, _event, f);
 	mlx_mouse_hook(f->mlx_win_ptr, _zoom, f);
 }
-
-

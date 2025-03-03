@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:41 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 17:55:08 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 03:47:37 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	set_pix_data_jul(t_fractol *f, int x, int y)
 {
 	t_nbr_cmplx z;
 
-	z.img = pix_cor_to_complexcor(x, f->x_start, f->x_end, WIDTH);;
-	z.real = pix_cor_to_complexcor(y, f->y_start, f->y_end, HEIGHT);;
+	z.real = pix_cor_to_complexcor(x, f->x_start, f->x_end, WIDTH);;
+	z.img = pix_cor_to_complexcor(y, f->y_start, f->y_end, HEIGHT);;
 	f->iter_n = 0;
 	while (f->iter_n < MAX_ITER)
 	{
@@ -39,10 +39,10 @@ void	julia(t_fractol *f)
 
 	y = 0;
 	zoom_init(f);
-	while (y < HEIGHT)
+	while (y < WIDTH)
 	{
 		x = 0;
-		while (x < WIDTH)
+		while (x < HEIGHT)
 		{
 			set_pix_data_jul(f, x, y);
 			x++;

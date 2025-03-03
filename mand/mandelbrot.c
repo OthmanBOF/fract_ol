@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:41:38 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 21:17:40 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 03:46:19 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ void	mandelbrot(t_fractol *f)
 
 	y = 0;
 	zoom_init(f);
-	while (y < HEIGHT)
+	while (y < WIDTH)
 	{
 		x = 0;
-		while (x < WIDTH)
+		while (x < HEIGHT)
 		{
 			set_pix_data_mandel(f, x, y);
 			x++;

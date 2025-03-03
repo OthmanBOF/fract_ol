@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:39:04 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/02 03:31:42 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/03 03:49:58 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int main(int ac, char **av)
 				parse_args(av[2]) && parse_args(av[3]))
 	{
 		fract.title = "Julia";
+		fract.c_julia.real = ft_atod(av[2]);
+		fract.c_julia.img = ft_atod(av[3]);
 		fract_prep(&fract);
 		fract_creat(&fract, fract.title);
 	}

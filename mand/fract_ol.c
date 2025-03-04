@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:39:04 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/03 17:12:57 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/04 03:43:39 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,14 @@ int	main(int ac, char **av)
 		mlx_loop(fract.mlx_init_ptr);
 	}
 	else
-		ft_put_err("try\nmandelbrot\njulia $real $img\n", 2);
+	{
+		ft_put_err("███████╗██████╗░██████╗░░█████╗░██████╗░\n", 2);
+		ft_put_err("██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗\n", 2);
+		ft_put_err("█████╗░░██████╔╝██████╔╝██║░░██║██████╔╝\n", 2);
+		ft_put_err("██╔══╝░░██╔══██╗██╔══██╗██║░░██║██╔══██╗\n", 2);
+		ft_put_err("███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║\n", 2);
+		ft_put_err("╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝\n", 2);
+		ft_put_err("\ntry\nmandelbrot\njulia $real $img\n", 2);
+		exit(EXIT_FAILURE);
+	}
 }

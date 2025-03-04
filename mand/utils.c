@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/03 17:16:19 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/04 03:42:35 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	ft_put_err(char *str, int fd)
 		ft_putchar_fd(str[i], fd);
 		i++;
 	}
-	exit(EXIT_FAILURE);
 }
 
 void	param_init(int *s, int *non_true, int *f, int *digit)

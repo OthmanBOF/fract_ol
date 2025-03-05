@@ -10,7 +10,7 @@ CC = cc
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -O3
 
 all: $(NAME)
 

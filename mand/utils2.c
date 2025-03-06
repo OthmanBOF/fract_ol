@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 22:02:31 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 18:02:13 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 23:15:35 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ int	ft_isspace(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] == 32)
+	while (str[i] == ' ')
 		i++;
 	return (i);
 }
-

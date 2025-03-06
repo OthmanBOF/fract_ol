@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 21:37:34 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 23:14:54 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,8 @@ t_nbr_cmplx	pow_comp2(t_nbr_cmplx z);
 void		event_init(t_fractol *f);
 double		ft_atod(char *str);
 int			ft_isspace(char *str);
+int			ft_nontrue(char *str);
+int			check_char(char c, int *s, int *f, int *digit);
+void		param_init(int *s, int *non_true, int *f, int *digit);
 
 #endif

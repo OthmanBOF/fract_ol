@@ -6,12 +6,12 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:43:44 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 17:27:17 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 23:15:26 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-#include <stdio.h>
+
 void	window_creat(t_fractol *f)
 {
 	f->mlx_win_ptr = mlx_new_window(f->mlx_init_ptr, WIDTH, HEIGHT, f->title);

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 18:10:55 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/03 17:17:36 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 23:15:50 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ double	ft_atod(char *str)
 
 	sign = 1;
 	i = 0;
+	while (str[i] == 32)
+		i++;
 	if (str[i] == '+' || str[i] == '-')
 		if (str[i++] == '-')
 			sign *= -1;
@@ -55,4 +57,43 @@ double	ft_atod(char *str)
 		nbr_rational *= 0.1;
 	}
 	return (sign * res);
+}
+
+int	ft_nontrue(char *str)
+{
+	int	i;
+	int	s;
+	int	non_true;
+	int	f;
+	int	digit;
+
+	param_init(&s, &non_true, &f, &digit);
+	i = 0;
+	while (str[i])
+	{
+		if (!check_char(str[i], &s, &f, &digit) && str[i] != ' ')
+			return (0);
+		if (str[i] == ' ')
+			break ;
+		i++;
+	}
+	if (s > 1 || f > 1 || digit < 1)
+		return (0);
+	return (i);
+}
+
+int	parse_args(char *str)
+{
+	int	i;
+	int	k;
+
+	k = ft_isspace(str);
+	i = ft_nontrue(str + k);
+	if (i == 0)
+		return (0);
+	while (str[i + k] == ' ')
+		i++;
+	if (str[i + k] != '\0')
+		return (0);
+	return (1);
 }

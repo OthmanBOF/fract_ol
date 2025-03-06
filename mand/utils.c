@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 21:59:01 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 23:14:30 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,50 +56,22 @@ void	param_init(int *s, int *non_true, int *f, int *digit)
 	*digit = 0;
 }
 
-int	ft_nontrue(char *str)
+int	check_char(char c, int *s, int *f, int *digit)
 {
-	int	i;
-	int	s;
-	int	non_true;
-	int	f;
-	int	digit;
-	param_init(&s, &non_true, &f, &digit);
-	i = -1;
-	while (str[++i])
+	if ((c == '-' || c == '+'))
 	{
-		if ((str[i] == '-' || str[i] == '+') && i != 0)
-			return (0);
-		if (str[i] == '-' || str[i] == '+')
-			s++;
-		else if (str[i] == '.')
-			f++;
-		else if (str[i] >= '0' && str[i] <= '9')
-			digit++;
-		else if (str[i] != ' ')
-			non_true++;
-		else
-			break;
+		(*s)++;
+		return (1);
 	}
-	if (s > 1 || f > 1 || non_true > 0 || digit < 1)
-		return (0);
-	return (i);
+	if (c == '.')
+	{
+		(*f)++;
+		return (1);
+	}
+	if (c >= '0' && c <= '9')
+	{
+		(*digit)++;
+		return (1);
+	}
+	return (0);
 }
-
-
-int	parse_args(char *str)
-{
-	int	i;
-	int	k;
-
-	k = 0;
-	k = ft_isspace(str);
-	i = ft_nontrue((str + k));
-	if (i == 0)
-		return (0);
-	while (str[i + k] == ' ')
-		i++;
-	if (str[i + k] != '\0')
-		return (0);
-	return (1);
-}
-

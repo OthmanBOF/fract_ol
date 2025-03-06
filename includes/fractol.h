@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/05 03:06:25 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 17:39:33 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ void		julia(t_fractol *f);
 t_nbr_cmplx	pow_comp2(t_nbr_cmplx z);
 void		event_init(t_fractol *f);
 double		ft_atod(char *str);
+int			ft_isspace(char *str);
 
 #endif

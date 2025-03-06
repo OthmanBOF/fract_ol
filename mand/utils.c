@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 03:00:49 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 18:14:57 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,10 @@ int	parse_args(char *str)
 	int	f;
 	int	digit;
 
-	i = -1;
+	i = 0;
 	param_init(&s, &non_true, &f, &digit);
+	i = ft_isspace(str);
+	--i;
 	while (str[++i])
 	{
 		if ((str[i] == '-' || str[i] == '+') && i != 0)
@@ -74,12 +76,73 @@ int	parse_args(char *str)
 			s += 1;
 		else if (str[i] == '.')
 			f += 1;
-		else if (str[i] > '9' || str[i] < '0')
-			non_true += 1;
+		else if ((str[i] > '0' && str[i] < '9'))
+			digit += 1;
 		else
-			digit++;
+			break;
 	}
 	if (str[i - 1] == '.' || s > 1 || non_true > 0 || f > 1 || digit < 1)
 		return (0);
+	while (str[i])
+	{
+		if (str[i] != ' ')
+			return 0 ;
+		i++;
+	}
 	return (1);
+}
+
+// int	parse_args(char *str)
+// {
+// 	int	i = 0;
+// 	int	s = 0, non_true = 0, f = 0, digit = 0;
+
+// 	// Skip leading spaces
+// 	while (str[i] == ' ')
+// 		i++;
+
+// 	// Ensure the string isn't just spaces
+// 	if (str[i] == '\0')
+// 		return (0);
+
+// 	// Parse the number
+// 	for (; str[i]; i++)
+// 	{
+// 		if ((str[i] == '-' || str[i] == '+') && i != 0)  // Sign must be at the start
+// 			return (0);
+// 		if (str[i] == '-' || str[i] == '+')
+// 			s++;
+// 		else if (str[i] == '.')
+// 			f++;
+// 		else if (str[i] >= '0' && str[i] <= '9')
+// 			digit++;
+// 		else if (str[i] != ' ')  // Reject anything that isn't a digit, sign, dot, or space
+// 			non_true++;
+// 		else
+// 			break;  // Stop parsing if we hit a space (trailing spaces allowed)
+// 	}
+
+// 	// Ensure it's a valid float format
+// 	if (s > 1 || f > 1 || non_true > 0 || digit < 1)
+// 		return (0);
+
+// 	// Ensure only spaces remain
+// 	while (str[i])
+// 	{
+// 		if (str[i] != ' ')
+// 			return (0);
+// 		i++;
+// 	}
+
+// 	return (1);
+// }
+
+int	parse_args(char *str){
+	//check for non numbers
+	//skip spaces
+	//check for .
+	//check for signe
+	//check for
+	ft_nontrue(str);
+
 }

@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 22:02:31 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/05 03:05:06 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 18:02:13 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,14 @@ double	pix_cor_to_complexcor(double val, double min, double max, double range)
 {
 	return ((val / range) * (max - min) + min);
 }
+
+int	ft_isspace(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] == 32)
+		i++;
+	return (i);
+}
+

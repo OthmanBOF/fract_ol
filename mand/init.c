@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:43:44 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 04:01:53 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 17:27:17 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void	img_creat(t_fractol *f)
 	if (!f->img.img_ptr)
 	{
 		mlx_destroy_window(f->mlx_init_ptr, f->mlx_win_ptr);
-		free(f->mlx_init_ptr);
-		f->mlx_win_ptr = NULL;
 		ft_put_err("img creation error\n", 2);
 		exit(1);
 	}

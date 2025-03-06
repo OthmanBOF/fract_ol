@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:43:44 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 03:08:03 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/06 03:11:30 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ void	fract_prep(t_fractol *fractol)
 {
 	fractol->mlx_init_ptr = mlx_init();
 	if (!fractol->mlx_init_ptr)
+	{
 		ft_put_err("connection error\n", 2);
+		exit(0);
+	}
 	window_creat(fractol);
 	img_creat(fractol);
 	plan(fractol);

@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror -O3
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC)  $(CFLAGS)  -fsanitize=address -g -lmlx -framework OpenGL -framework AppKit $^ -o $@
+	$(CC)  $(CFLAGS) -lmlx -framework OpenGL -framework AppKit $^ -o $@
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@

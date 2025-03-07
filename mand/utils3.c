@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 18:10:55 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 23:15:50 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/07 03:25:23 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,23 +61,20 @@ double	ft_atod(char *str)
 
 int	ft_nontrue(char *str)
 {
-	int	i;
-	int	s;
-	int	non_true;
-	int	f;
-	int	digit;
+	int		i;
+	t_check	check;
 
-	param_init(&s, &non_true, &f, &digit);
+	param_init(&check);
 	i = 0;
 	while (str[i])
 	{
-		if (!check_char(str[i], &s, &f, &digit) && str[i] != ' ')
+		if (!check_char(str[i], &check) && str[i] != ' ')
 			return (0);
 		if (str[i] == ' ')
 			break ;
 		i++;
 	}
-	if (s > 1 || f > 1 || digit < 1)
+	if (check.s > 1 || check.f > 1 || check.digit < 1)
 		return (0);
 	return (i);
 }

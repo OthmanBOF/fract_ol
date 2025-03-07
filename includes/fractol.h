@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 19:27:46 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 23:14:54 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/07 03:28:29 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,15 @@
 # define ERROR4 "██╔══╝░░██╔══██╗██╔══██╗██║░░██║██╔══██╗\n"
 # define ERROR5 "███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║\n"
 # define ERROR6 "╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝\n"
+
+typedef struct s_check
+{
+	int	s;
+	int	non_true;
+	int	f;
+	int	digit;
+	int	prev;
+}	t_check;
 
 typedef struct s_nbr_cmplx
 {
@@ -81,7 +90,7 @@ void		event_init(t_fractol *f);
 double		ft_atod(char *str);
 int			ft_isspace(char *str);
 int			ft_nontrue(char *str);
-int			check_char(char c, int *s, int *f, int *digit);
-void		param_init(int *s, int *non_true, int *f, int *digit);
+int			check_char(char c, t_check *check);
+void		param_init(t_check *check);
 
 #endif

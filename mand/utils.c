@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:40:10 by obouftou          #+#    #+#             */
-/*   Updated: 2025/03/06 23:14:30 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/03/07 03:29:32 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,30 +48,34 @@ void	ft_put_err(char *str, int fd)
 	}
 }
 
-void	param_init(int *s, int *non_true, int *f, int *digit)
+void	param_init(t_check *check)
 {
-	*s = 0;
-	*non_true = 0;
-	*f = 0;
-	*digit = 0;
+	check->s = 0;
+	check->non_true = 0;
+	check->f = 0;
+	check->digit = 0;
+	check->prev = -1;
 }
 
-int	check_char(char c, int *s, int *f, int *digit)
+int	check_char(char c, t_check *check)
 {
-	if ((c == '-' || c == '+'))
+	if (c == '-' || c == '+')
 	{
-		(*s)++;
-		return (1);
+		if (check->prev != -1)
+			return (0);
+		check->s++;
 	}
-	if (c == '.')
+	else if (c == '.')
 	{
-		(*f)++;
-		return (1);
+		if (check->prev == '.' || check->prev == -1 || check->prev == '+'
+			|| check->prev == '-')
+			return (0);
+		check->f++;
 	}
-	if (c >= '0' && c <= '9')
-	{
-		(*digit)++;
-		return (1);
-	}
-	return (0);
+	else if (c >= '0' && c <= '9')
+		check->digit++;
+	else
+		return (0);
+	check->prev = c;
+	return (1);
 }
